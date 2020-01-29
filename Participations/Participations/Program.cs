@@ -36,6 +36,8 @@ namespace Participations
 
             }
 
+            const string developer = "Stephanie Fox";
+                Console.WriteLine(developer);
             Console.ReadKey();
 
         }
