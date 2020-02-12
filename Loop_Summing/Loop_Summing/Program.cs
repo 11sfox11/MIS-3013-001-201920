@@ -32,7 +32,7 @@ namespace Loop_Summing
                 Console.WriteLine("Do you have another # to add? (y, n) >>");
                 answer = Console.ReadLine();
 
-            } while (answer == "y");
+            } while (answer.ToLower() == "y");
             Console.WriteLine($"Your summation of values is {sum.ToString("N2")}");
             Console.ReadKey();    
         }
