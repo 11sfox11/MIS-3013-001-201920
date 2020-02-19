@@ -14,7 +14,7 @@ namespace Participations3
             string prompt = "What is your next score?";
             
             List<int> scores = new List<int>();
-
+            double sum = 0 ;
             string more;
             do
             {
@@ -23,6 +23,7 @@ namespace Participations3
                 scores.Add(inputnum);
                 Console.WriteLine("Type 'yes' if you have another score.");
                 more = Console.ReadLine();
+                sum += inputnum;
             } while (more == "yes");
             int max = -78909;
             int min = 40000;
@@ -40,9 +41,10 @@ namespace Participations3
 
                      
             }
-
+            double avg = sum / scores.Count;
             Console.WriteLine("Your max exam score is " + max);
             Console.WriteLine("Your minimum exam score is " + min);
+            Console.WriteLine("Your average score is " + avg);
 
             Console.ReadKey();
         }
