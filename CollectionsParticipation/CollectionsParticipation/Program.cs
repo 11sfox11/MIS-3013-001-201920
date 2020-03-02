@@ -15,7 +15,7 @@ namespace CollectionsParticipation
             //array
             int[] courseNumbers = new int[3];
             string[] subjects = new string[3];
-
+            string[] code = new string[3];
             for (int i = 0; i < subjects.Length; i++)
             {
                 Console.WriteLine("Please enter your course subject.");
@@ -33,6 +33,12 @@ namespace CollectionsParticipation
                 Console.WriteLine($"You are enrolled in {subjects[i]} {courseNumbers[i]}.");
             }
 
+
+            for (int i = 0; i < subjects.Length; i++)
+            {
+                code[i] = $"{courseNumbers[i]} {subjects[i]}";
+            }
+    
             // exam calculator
 
             Console.WriteLine("Please enter your exam grades.");
@@ -61,6 +67,15 @@ namespace CollectionsParticipation
 
 
             //dictionary
+            Dictionary<string, int> final = new Dictionary<string, int>();
+
+            for (int i = 0; i < subjects.Length; i++)
+            {
+                final.Add(code[i], scores[i]);
+
+            }
+
+
             Console.ReadKey();
         }
     }
