@@ -60,6 +60,7 @@ namespace CollectionsParticipation
             Console.WriteLine($"Your final exam score is {average.ToString("N3")}");
 
 
+            //dictionary
             Console.ReadKey();
         }
     }
